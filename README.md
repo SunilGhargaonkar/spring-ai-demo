@@ -8,9 +8,9 @@ A simple Spring Boot project experimenting with
 
 
 ## Features
-- **Ask anything** → forwards your query to an LLM (using Spring AI integration + a local/free LLM).
-- **Weather check** → get real-time weather for any city.
-- **Calendar booking** → book events in Google Calendar with natural language prompts like:
+- **Ask anything**→ forwards your query to an LLM (using Spring AI integration + a local/free LLM). ![Ask anything](screenshots/How-MCP-Works.png)
+- **Weather check** → get real-time weather for any city.![Weather check](screenshots/London-Weather.png)
+- **Calendar booking** → book events in Google Calendar with natural language prompts like: ![Calendar booking](screenshots/Book-Meeting.png)
   > *"Book a meeting tomorrow at 3 PM for dentist"*  
   > *"Book a lunch in my calendar at 12pm on 4th Oct 2025"*
 
