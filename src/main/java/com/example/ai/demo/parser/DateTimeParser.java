@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
 
 @Component
 public class DateTimeParser {
-
     private static final ZoneId TIMEZONE = ZoneId.of("Europe/London");
 
     public LocalDateTime parse(String input) {

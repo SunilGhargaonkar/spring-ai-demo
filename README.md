@@ -8,11 +8,12 @@ A simple Spring Boot project experimenting with
 
 
 ## Features
-- **Ask anything**→ forwards your query to an LLM (using Spring AI integration + a local/free LLM). ![Ask anything](screenshots/How-MCP-Works.png)
+- **Ask anything**→ forwards your query to an LLM (using Spring AI integration + a free openrouter LLM model ). ![Ask anything](screenshots/How-MCP-Works.png)
 - **Weather check** → get real-time weather for any city.![Weather check](screenshots/London-Weather.png)
-- **Calendar booking** → book events in Google Calendar with natural language prompts like: ![Calendar booking](screenshots/Book-Meeting.png)
+- **Calendar booking** → book events in Google Calendar with natural language prompts like:
   > *"Book a meeting tomorrow at 3 PM for dentist"*  
   > *"Book a lunch in my calendar at 12pm on 4th Oct 2025"*
+  ![Calendar booking](screenshots/Book-Meeting.png)
 
 ## Tech Stack
 - Java 21
@@ -25,7 +26,7 @@ A simple Spring Boot project experimenting with
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/spring-ai-demo.git
+git clone https://github.com/SunilGhargaonkar/spring-ai-demo.git
 cd spring-ai-demo
 ```
 ### 2. update application.property file

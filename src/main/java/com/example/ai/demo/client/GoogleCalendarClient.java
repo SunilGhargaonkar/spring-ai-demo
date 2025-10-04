@@ -22,7 +22,6 @@ import java.util.List;
 
 @Component
 public class GoogleCalendarClient {
-
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
     private static final List<String> SCOPES = List.of(CalendarScopes.CALENDAR);
 

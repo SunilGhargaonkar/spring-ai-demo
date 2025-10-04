@@ -8,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Service
 public class LlmService {
@@ -22,14 +23,15 @@ public class LlmService {
     public String ask(String query) {
         final HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(apiKey);
-        headers.setContentType(
-                MediaType.APPLICATION_JSON);
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
         final Map<String, Object> requestBody = Map.of("model", model, "messages",
                 List.of(Map.of("role", "user", "content", query)));
         final HttpEntity<Map<String, Object>> entity = new HttpEntity<>(requestBody, headers);
+
         final ResponseEntity<String> response =
                 restTemplate.exchange(openRouterUrl, HttpMethod.POST, entity, String.class);
-        final JSONObject json = new JSONObject(response.getBody());
+        final JSONObject json = new JSONObject(Objects.requireNonNull(response.getBody()));
 
         return json.getJSONArray("choices")
                 .getJSONObject(0)

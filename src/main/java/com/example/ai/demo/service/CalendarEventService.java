@@ -14,7 +14,6 @@ import java.util.Date;
 
 @Service
 public class CalendarEventService {
-
     private static final ZoneId TIMEZONE = ZoneId.of("Europe/London");
     private final GoogleCalendarClient calendarClient;
 
@@ -38,7 +37,7 @@ public class CalendarEventService {
 
             if (!existingEvents.getItems().isEmpty()) {
                 return "Conflict: already booked event '" 
-                        + existingEvents.getItems().get(0).getSummary() + "'";
+                        + existingEvents.getItems().getFirst().getSummary() + "'";
             }
 
             final Event event = new Event()
